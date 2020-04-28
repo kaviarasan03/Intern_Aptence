@@ -1,0 +1,308 @@
+<!-----------------------------Nav bar starts---------------------->
+<nav class="navbar navbar-expand-sm ">
+  <img class="icon" href="#" src="../assets/Images/menu-24px.svg">
+  <img src="../assets/Images/logo.png" id="logo"> 
+
+  <div class="input-group">
+  <input type="text" class="form-control" placeholder="Search">
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"></a>     
+  </div>
+
+  <img class="icon" src="../assets/Images/account_circle-24px.svg">
+  <img class="icon" src="../assets/Images/notification_important-24px.svg">
+  <span matBadge="."  matBadgeColor="warn"  matBadgeSize="small" matBadgePosition="above after"></span>
+  <img class="icon"  src="../assets/Images/sms-24px.svg">
+  <span matBadge="."  matBadgeColor="warn"  matBadgeSize="small" matBadgePosition="above after"></span>
+</nav>
+<!------------------------------Nav bar ends---------------------->
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col" id="new" >
+      <p id="head_inside">Ministries of Electronics and Information Technology</p>
+    </div>
+  </div>
+</div>
+<!----------------------------------cards---------------------------->
+<div class="container-fluid">
+  <div class="row" id="head" >
+    <div class="col-6" >
+      <mat-card class="card1">
+        <div class="row" >
+          <div class="col-2">
+            <h2 class="cardheader">PRINT</h2>
+          </div>
+          <div class="col-10">
+            <img mat-card-image id="cardIcon" src="../assets/Images/sms-24px.svg">&nbsp;<span id="cardIcon1">Feedback</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/print-24px.svg">&nbsp;<span id="cardIcon1">Print</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/assignment-24px.svg">&nbsp;<span id="cardIcon1">Generate Report</span>&nbsp;&nbsp;&nbsp;
+            <hr id="line"> 
+          </div>
+        </div>
+        <mat-card-content >
+          <span style="color: black;"><strong>No of mentions</strong> </span>
+          <div class="row" >
+            <div class="col-7" > 
+              <div style="display: block;height:5vh;" id="chart">
+                <canvas mdbChart 
+                    [chartType]="chartType"
+                    [datasets]="chartDatasets"
+                    [labels]="chartLabels"
+                    [colors]="chartColors"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+              <div class="row" id="chart1">
+                <div style="display: block" id="doughnut_chart" >
+                  <canvas mdbChart 
+                      [chartType]="chartType"
+                      [datasets]="chartDatasets1"
+                      [labels]="chartLabels1"
+                      [colors]="chartColors"
+                      [options]="chartOptions"
+                      [legend]="true"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+                  </canvas>
+                  <p style="color: black;text-align: center;">#DigitalIndia</p>
+                </div>
+                <div style="display: block" id="doughnut_chart" >
+                  <canvas mdbChart 
+                      [chartType]="chartType"
+                      [datasets]="chartDatasets2"
+                      [labels]="chartLabels1"
+                      [colors]="chartColors"
+                      [options]="chartOptions"
+                      [legend]="true"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+                  </canvas>
+                  <p style="color: black;text-align: center;">#MEITY</p>
+                </div>
+                <div style="display: block" id="doughnut_chart" >
+                  <canvas mdbChart 
+                      [chartType]="chartType"
+                      [datasets]="chartDatasets3"
+                      [labels]="chartLabels1"
+                      [colors]="chartColors"
+                      [options]="chartOptions"
+                      [legend]="true"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+                  </canvas>
+                  <p style="color: black;text-align: center;" >#ITMinistry</p>
+                </div>
+              </div>
+              <div class="row" id="chart1">
+                <div style="display: block" id="doughnut_chart" >
+                  <canvas mdbChart 
+                      [chartType]="chartType"
+                      [datasets]="chartDatasets1"
+                      [labels]="chartLabels1"
+                      [colors]="chartColors"
+                      [options]="chartOptions"
+                      [legend]="true"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+                  </canvas>
+                  <p style="color: black;text-align: center;">#DigitalIndia</p>
+                </div>
+                <div style="display: block" id="doughnut_chart" >
+                  <canvas mdbChart 
+                      [chartType]="chartType"
+                      [datasets]="chartDatasets2"
+                      [labels]="chartLabels1"
+                      [colors]="chartColors"
+                      [options]="chartOptions"
+                      [legend]="true"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+                  </canvas>
+                  <p style="color: black;text-align: center;">#MEITY</p>
+                </div>
+                <div style="display: block" id="doughnut_chart" >
+                  <canvas mdbChart 
+                      [chartType]="chartType"
+                      [datasets]="chartDatasets3"
+                      [labels]="chartLabels1"
+                      [colors]="chartColors"
+                      [options]="chartOptions"
+                      [legend]="true"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+                  </canvas>
+                  <p style="color: black;text-align: center;" >#ITMinistry</p>
+                </div>
+              </div>
+            </div>
+            <div class="vl"></div>
+            <div class="col-4" style="color: black;font-size: x-small;">
+              <p > Top News</p>
+              <table style="width:100%">
+                
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/insert_photo-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Delhi court orders 'Chhapaak' makers to give credit to Laxmi Agarwal's lawyer<br>INDIA</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/insert_photo-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Indian Army Chief General Manoj Mukund Naravane visits Siachen,meets soliders<br>INDIA</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/link-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Gautam Budh Nagar SSP Vaibhav Krishna suspended,several IPS officers transferred in UP<br>UTTAR PRADESH</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/assignment-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Kangana Ranaut's sister Rangoli Chandel recalls her acid attack ordeal<br>PEOPLE</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/insert_photo-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Delhi Police arrests three suspected ISIS terroriss<br>INDIA</p></td>
+                </tr>
+              </table>
+              
+            </div>
+          </div>  
+          <br>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-6">
+      <mat-card class="card2">
+        <div class="row" >
+          <div class="col-3">
+            <h2 class="cardheader">ELECTRONICS</h2>
+          </div>
+          <div class="col-9">
+            <img mat-card-image id="cardIcon" src="../assets/Images/sms-24px.svg">&nbsp;<span id="cardIcon1">Feedback</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/print-24px.svg">&nbsp;<span id="cardIcon1">Print</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/assignment-24px.svg">&nbsp;<span id="cardIcon1">Generate Report</span>&nbsp;&nbsp;&nbsp;
+            <hr id="line"> 
+          </div>
+        </div>
+        <mat-card-content style="margin-top: -4vh;">
+          <div class="row">
+            <div class="col-7">
+              <div style="display: block;">
+                <canvas mdbChart style="height: 28vh;"
+                    [chartType]="chartType5"
+                    [datasets]="chartDatasets5"
+                    [labels]="chartLabels5"
+                    [colors]="chartColors5"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+            </div>
+            <div class="vl"></div>
+            <div class="col-4" style="color: black;font-size: x-small;">
+              <p > Top News</p>
+              <table style="width:100%">
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/insert_photo-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Delhi court orders 'Chhapaak' makers to give credit to Laxmi Agarwal's lawyer<br>INDIA</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/insert_photo-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Indian Army Chief General Manoj Mukund Naravane visits Siachen,meets soliders<br>INDIA</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/link-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Gautam Budh Nagar SSP Vaibhav Krishna suspended,several IPS officers transferred in UP<br>UTTAR PRADESH</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/assignment-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Kangana Ranaut's sister Rangoli Chandel recalls her acid attack ordeal<br>PEOPLE</p></td>
+                </tr>
+                <tr>
+                  <td><img mat-card-image id="cardIcon2" src="../assets/Images/insert_photo-24px.svg"></td>
+                  <td><p style="line-height: 10px;">Delhi Police arrests three suspected ISIS terroriss<br>INDIA</p></td>
+                </tr>
+              </table> 
+            </div>
+          </div>   
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row" id="head">
+    <div class="col-6">
+      <mat-card class="card3">
+        <div class="row" >
+          <div class="col-2">
+            <h2 class="cardheader">DIGITAL</h2>
+          </div>
+          <div class="col-10">
+            <img mat-card-image id="cardIcon" src="../assets/Images/sms-24px.svg">&nbsp;<span id="cardIcon1">Feedback</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/print-24px.svg">&nbsp;<span id="cardIcon1">Print</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/assignment-24px.svg">&nbsp;<span id="cardIcon1">Generate Report</span>&nbsp;&nbsp;&nbsp;
+            <hr id="line"> 
+          </div>
+        </div>
+        <mat-card-content >
+          <div class="row">
+            <div class="col-7">
+              <div style="display: block;">
+                <canvas mdbChart style="height: 28vh;"
+                    [chartType]="chartType5"
+                    [datasets]="chartDatasets5"
+                    [labels]="chartLabels5"
+                    [colors]="chartColors5"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+            </div>
+            <div class="col-5" style="color: black">
+              <img mat-card-image id="cardIcon" src="../assets/Images/Word_cloud.png" style="height: 40vh;width:15vw">
+            </div>
+          </div>   
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-6">
+      <mat-card class="card4">
+        <div class="row" >
+          <div class="col-2">
+            <h2 class="cardheader">SOCIAL</h2>
+          </div>
+          <div class="col-10">
+            <img mat-card-image id="cardIcon" src="../assets/Images/sms-24px.svg">&nbsp;<span id="cardIcon1">Feedback</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/print-24px.svg">&nbsp;<span id="cardIcon1">Print</span>&nbsp;&nbsp;&nbsp;
+            <img mat-card-image id="cardIcon" src="../assets/Images/assignment-24px.svg">&nbsp;<span id="cardIcon1">Generate Report</span>&nbsp;&nbsp;&nbsp;
+            <hr id="line"> 
+          </div>
+        </div>
+        <mat-card-content >
+          <div class="row">
+            <div class="col-7">
+              <div style="display: block;">
+                <canvas mdbChart style="height: 28vh;"
+                    [chartType]="chartType5"
+                    [datasets]="chartDatasets5"
+                    [labels]="chartLabels5"
+                    [colors]="chartColors5"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+            </div>
+            <div class="col-5" style="color: black">
+              <img mat-card-image id="cardIcon" src="../assets/Images/Word_cloud.png" style="height: 40vh;width:15vw">
+            </div>
+          </div>   
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
